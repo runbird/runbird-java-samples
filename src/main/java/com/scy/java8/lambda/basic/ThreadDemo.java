@@ -1,4 +1,4 @@
-package com.scy.java8.lambda;
+package com.scy.java8.lambda.basic;
 
 /**
  * 类名： ThreadDemo <br>
