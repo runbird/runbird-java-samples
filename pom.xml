@@ -23,5 +23,6 @@
     <modules>
         <module>runbirdconcurrent</module>
         <module>runbirdjava8inaction</module>
+        <module>runbirdmaster</module>
     </modules>
 </project>
