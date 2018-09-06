@@ -34,7 +34,7 @@ public class RunStream {
                     return s > 100000;
                 });
 
-                //终止操作
+        //终止操作
         stream.count(); //ctrl+alt+v 抽取出变量stream
     }
 }

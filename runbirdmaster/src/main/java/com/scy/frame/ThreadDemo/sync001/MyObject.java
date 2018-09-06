@@ -2,12 +2,12 @@ package com.scy.frame.ThreadDemo.sync001;
 
 /**
  * 对象锁的同步和异步问题
- * @author alienware
  *
+ * @author alienware
  */
 public class MyObject {
 
-    public synchronized void method1(){
+    public synchronized void method1() {
         System.out.println(Thread.currentThread().getName());
         try {
             Thread.sleep(3000);

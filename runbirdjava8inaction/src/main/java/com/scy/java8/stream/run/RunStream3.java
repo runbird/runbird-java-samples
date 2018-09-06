@@ -48,9 +48,9 @@ public class RunStream3 {
 
     }
 
-    public static void print(String s){
+    public static void print(String s) {
         //带线程名（测试并行情况）
-        System.out.println(Thread.currentThread().getName()+"--->"+s);
+        System.out.println(Thread.currentThread().getName() + "--->" + s);
         try {
             TimeUnit.MILLISECONDS.sleep(5);
         } catch (InterruptedException e) {

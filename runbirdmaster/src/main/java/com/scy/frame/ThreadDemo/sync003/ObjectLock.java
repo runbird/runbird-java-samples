@@ -2,13 +2,13 @@ package com.scy.frame.ThreadDemo.sync003;
 
 /**
  * 使用synchronized代码块加锁,比较灵活
- * @author alienware
  *
+ * @author alienware
  */
 public class ObjectLock {
 
-    public void method1(){
-        synchronized (this) {	//对象锁
+    public void method1() {
+        synchronized (this) {    //对象锁
             try {
                 System.out.println("do method1..");
                 Thread.sleep(2000);
@@ -18,7 +18,7 @@ public class ObjectLock {
         }
     }
 
-    public void method2(){		//类锁
+    public void method2() {        //类锁
         synchronized (ObjectLock.class) {
             try {
                 System.out.println("do method2..");
@@ -30,7 +30,8 @@ public class ObjectLock {
     }
 
     private Object lock = new Object();
-    public void method3(){		//任何对象锁
+
+    public void method3() {        //任何对象锁
         synchronized (lock) {
             try {
                 System.out.println("do method3..");

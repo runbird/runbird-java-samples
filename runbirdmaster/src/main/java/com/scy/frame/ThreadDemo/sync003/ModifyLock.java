@@ -4,6 +4,7 @@ package com.scy.frame.ThreadDemo.sync003;
  * 同一对象属性的修改不会影响锁的情况
  * 对一个对象进行操作 sychronieze 这种情况下可以同步
  * 对象发生改变不影响 lock
+ *
  * @author alienware
  */
 public class ModifyLock {

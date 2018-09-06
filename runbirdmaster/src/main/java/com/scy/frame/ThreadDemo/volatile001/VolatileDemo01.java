@@ -11,5 +11,4 @@ package com.scy.frame.ThreadDemo.volatile001;
 public class VolatileDemo01 {
 
 
-
 }

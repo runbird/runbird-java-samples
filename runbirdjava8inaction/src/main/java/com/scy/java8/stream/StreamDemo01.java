@@ -28,7 +28,7 @@ public class StreamDemo01 {
         //流操作，Map是中间操作，sum是终止操作
         // int sum3 = IntStream.of(nums).map(i -> i * 2).sum();
         int sum3 = IntStream.of(nums).map(StreamDemo01::lowEn).sum();
-        System.out.println("有终止操作，sum:"+sum3);
+        System.out.println("有终止操作，sum:" + sum3);
 
         //没有终止操作时，则不进行中间操作
         IntStream.of(nums).map(StreamDemo01::lowEn);

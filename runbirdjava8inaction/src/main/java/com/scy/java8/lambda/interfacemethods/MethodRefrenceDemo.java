@@ -14,9 +14,9 @@ public class MethodRefrenceDemo {
 
     public static void main(String[] args) {
         //断言函数接口 predicate
-        Predicate<Integer> predicate = i -> i>0;
+        Predicate<Integer> predicate = i -> i > 0;
         //int类型断言，可不用泛型
-        IntPredicate predicate1 = p -> p>0;
+        IntPredicate predicate1 = p -> p > 0;
         System.out.println(predicate.test(-9)); //false
         System.out.println(predicate1.test(8)); //ture
 
@@ -35,42 +35,44 @@ public class MethodRefrenceDemo {
         dogConsumer.accept(dog);
 
         //非静态方法，使用对象实例的方法引用 实例化了dog
-        Function<Integer,Integer> function = dog::eat;
-        System.out.println("还剩下"+function.apply(4)+"斤");//还剩下6斤
-        
+        Function<Integer, Integer> function = dog::eat;
+        System.out.println("还剩下" + function.apply(4) + "斤");//还剩下6斤
+
         //输入输出同一类型可改进
         UnaryOperator<Integer> functionOfUnaryOperator = dog::eat;
-        System.out.println("还剩下"+functionOfUnaryOperator.apply(3)+"斤");
-        
+        System.out.println("还剩下" + functionOfUnaryOperator.apply(3) + "斤");
+
         //JDK提供的Integer类型
         IntUnaryOperator functionOfIntUnary = dog::eat;
-        System.out.println("还剩下"+functionOfIntUnary.applyAsInt(3)+"斤");
+        System.out.println("还剩下" + functionOfIntUnary.applyAsInt(3) + "斤");
 
         //---------- Java 传值引用 不为null》
         IntUnaryOperator functionForNull = dog::eat;
         dog = null; //52行不为NULL
-        System.out.println("null :"+functionForNull.applyAsInt(3)+"斤");
+        System.out.println("null :" + functionForNull.applyAsInt(3) + "斤");
 
         //使用类名来引用非静态方法
-        BiFunction<Dog,Integer,Integer> biFunction = Dog::eat; 
-        System.out.println("还剩下"+biFunction.apply(dog,3)+"斤"); //51行为null,这里报错
-        
+        BiFunction<Dog, Integer, Integer> biFunction = Dog::eat;
+        System.out.println("还剩下" + biFunction.apply(dog, 3) + "斤"); //51行为null,这里报错
+
         // 构造函数的引用
         // 没有参数的构造函数可以理解为一个 没有输入(),输出为对象dog的提供者
         Supplier<Dog> supplierOfDog = Dog::new;
-        System.out.println("创建了新对象"+supplierOfDog.get());
+        System.out.println("创建了新对象" + supplierOfDog.get());
 
         // 有参数的构造函数
-        Function<String,Dog> functionOfDog = Dog::new;
-        System.out.println("创建了新对象"+functionOfDog.apply("big dog"));
+        Function<String, Dog> functionOfDog = Dog::new;
+        System.out.println("创建了新对象" + functionOfDog.apply("big dog"));
 
 
     }
 }
 
-class Dog{
+class Dog {
     //无参的构造函数
-    public Dog() {}
+    public Dog() {
+    }
+
     //带参数的构造函数
     public Dog(String name) {
         this.name = name;
@@ -82,7 +84,7 @@ class Dog{
 
     // --- 静态方法
     public static void bark(Dog dog) {
-        System.out.println(dog+" wong wong wong !");//litte dog wong wong wong !
+        System.out.println(dog + " wong wong wong !");//litte dog wong wong wong !
     }
 
     /**
@@ -94,9 +96,9 @@ class Dog{
      * 版本： V1.0<br>
      */
     // --- 非静态方法
-    public int eat(Dog this,int num) { // <---------------------->
+    public int eat(Dog this, int num) { // <---------------------->
         System.out.println("吃了" + num + "斤");//吃了4斤
-        this.food -=num;
+        this.food -= num;
         return this.food;
     }
 

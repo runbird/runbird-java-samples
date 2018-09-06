@@ -1,6 +1,7 @@
 package com.scy.demo.ClassHandle;
 
 /**
+ * @author suocaiyuan
  * @version V1.0
  * 类名： InitializationDemo3 <br>
  * 描述：
@@ -19,8 +20,6 @@ package com.scy.demo.ClassHandle;
  * 后执行对象的构造器（按顺序收集成员变量赋值和普通代码块，最后收集对象构造器，最终组成对象构造器 ）。<br>
  * <p>
  * 创建日期： 2018/6/20 <br>
- *
- * @author suocaiyuan
  */
 public class Book2 {
     public static void main(String[] args) {

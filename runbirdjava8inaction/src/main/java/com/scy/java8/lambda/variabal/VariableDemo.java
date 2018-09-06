@@ -15,11 +15,11 @@ public class VariableDemo {
     public static void main(String[] args) {
 
         /*
-        * java 参数内部类和外部类参数的问题：
-        *   传值 不传 参
-        *   不然会产生二异性
-        *  因此 外部类参数需要用final修饰
-        */
+         * java 参数内部类和外部类参数的问题：
+         *   传值 不传 参
+         *   不然会产生二异性
+         *  因此 外部类参数需要用final修饰
+         */
 
 
         String str = "hello world!";

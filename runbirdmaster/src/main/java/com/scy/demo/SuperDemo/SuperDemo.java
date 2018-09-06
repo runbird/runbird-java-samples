@@ -16,7 +16,7 @@ public class SuperDemo {
 
 }
 
-class Animal{
+class Animal {
 
     String name;
 
@@ -28,11 +28,11 @@ class Animal{
     }
 }
 
-class Dog extends Animal{
+class Dog extends Animal {
 
 
     public Dog(String name, String color) {
-        super(name,color);
+        super(name, color);
         // 有参数的构造方法 需要 使用 super(name, color);
         /*this.name = name;
         this.color = color;

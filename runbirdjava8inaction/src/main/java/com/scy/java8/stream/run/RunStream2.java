@@ -14,7 +14,6 @@ import java.util.stream.Stream;
 
 /**
  * 无状态操作中间加入有状态操作，有状态操作会截断无状态操作，然后进行单独处理
- *
  */
 public class RunStream2 {
 

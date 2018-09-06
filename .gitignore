@@ -1,21 +1,25 @@
+/target/
+!.mvn/wrapper/maven-wrapper.jar
 
-/.settings
-/bin
-*/target/*
-/logs
-*/out/
-
-# filter config files, except .gitignore
-*.MF
-!.gitignore
-*.iml
-*.exe
-# eclipse ignore
-.project
+### STS ###
+.apt_generated
 .classpath
-# IDEA ignore
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
 .idea
-.class
-*.class
-*.log
-!application.properties
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/

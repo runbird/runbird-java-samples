@@ -24,5 +24,6 @@
         <module>runbirdconcurrent</module>
         <module>runbirdjava8inaction</module>
         <module>runbirdmaster</module>
+        <module>runbirdwebflux</module>
     </modules>
 </project>

@@ -9,16 +9,14 @@ package com.scy.demo.ClassHandle;
  * @version V1.0
  */
 public class Book {
-    public static void main(String[] args)
-    {
-        System.out.println("Hello ShuYi."+amount);
+    public static void main(String[] args) {
+        System.out.println("Hello ShuYi." + amount);
         //new Book();
     }
 
-    Book()
-    {
+    Book() {
         System.out.println("书的构造方法");
-        System.out.println("price=" + price +",amount=" + amount);
+        System.out.println("price=" + price + ",amount=" + amount);
     }
 
     {
@@ -27,8 +25,7 @@ public class Book {
 
     int price = 110;
 
-    static
-    {
+    static {
         System.out.println("书的静态代码块");
     }
 

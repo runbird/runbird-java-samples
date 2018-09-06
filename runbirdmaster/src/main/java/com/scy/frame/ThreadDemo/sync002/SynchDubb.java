@@ -1,8 +1,9 @@
 package com.scy.frame.ThreadDemo.sync002;
+
 /**
  * synchronized的重入
- * @author alienware
  *
+ * @author alienware
  */
 public class SynchDubb {
 
@@ -18,7 +19,7 @@ public class SynchDubb {
         t1.start();
     }
 
-    public synchronized void method1(){
+    public synchronized void method1() {
         System.out.println("<=========== there is method1");
         method2();
     }

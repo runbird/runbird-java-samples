@@ -80,6 +80,7 @@ public class Demo1 {
         }
 
     }
+
     //在 Java 8 中获取当前时间
     private static void demoFunction6() {
         LocalTime now = LocalTime.now();
@@ -92,13 +93,13 @@ public class Demo1 {
     //如何计算一周后的日期
     private static void demoFunction7() {
         LocalDate now = LocalDate.now();
- //LocalDate 日期不包含时间信息，它的 plus()方法用来增加天、周、月，ChronoUnit 类声明了这些时间单位。由于 LocalDate 也是不变类型，返回后一定要用变量赋值。
+        //LocalDate 日期不包含时间信息，它的 plus()方法用来增加天、周、月，ChronoUnit 类声明了这些时间单位。由于 LocalDate 也是不变类型，返回后一定要用变量赋值。
         LocalDate plus = now.plus(1, ChronoUnit.WEEKS);//chrono 计时
-        System.out.println(now+","+plus);//现在和一周后
+        System.out.println(now + "," + plus);//现在和一周后
         //计算一年前或一年后的日期
         LocalDate minusOfYear = now.minus(1, ChronoUnit.YEARS);
         LocalDate plusOfYear = now.plus(1, ChronoUnit.YEARS);
-        System.out.println(minusOfYear+","+plusOfYear);//一年前和一年后
+        System.out.println(minusOfYear + "," + plusOfYear);//一年前和一年后
     }
 
     //使用 Java 8 的 Clock 时钟类
@@ -107,7 +108,7 @@ public class Demo1 {
     private static void demoFunction8() {
         Clock systemUTC = Clock.systemUTC();
         Clock systemDefaultZone = Clock.systemDefaultZone();
-        System.out.println(systemUTC+","+systemDefaultZone);//SystemClock[Z],SystemClock[Asia/Shanghai]
+        System.out.println(systemUTC + "," + systemDefaultZone);//SystemClock[Z],SystemClock[Asia/Shanghai]
     }
 
     //如何用 Java 判断日期是早于还是晚于另一个日期
@@ -147,7 +148,7 @@ public class Demo1 {
 
     //如何在 Java 8 中检查闰年
     private static void demoFunction12() {
-      // isLeapYear()判断闰年
+        // isLeapYear()判断闰年
     }
 
     //计算两个日期之间的天数和月数
@@ -163,7 +164,7 @@ public class Demo1 {
     private static void demoFunction14() {
 //        在 Java 8 中，ZoneOffset 类用来表示时区，举例来说印度与 GMT 或 UTC 标准时区相差 +05:30，
 //        可以通过ZoneOffset.of() 静态方法来获取对应的时区。一旦得到了时差就可以通过传入 LocalDateTime 和 ZoneOffset 来创建一个 OffSetDateTime 对象。
-        LocalDateTime datetime = LocalDateTime.of(2014, Month.JANUARY, 14,19,30);
+        LocalDateTime datetime = LocalDateTime.of(2014, Month.JANUARY, 14, 19, 30);
         ZoneOffset offset = ZoneOffset.of("+05:30");
         OffsetDateTime date = OffsetDateTime.of(datetime, offset);
         System.out.println("Date and Time with timezone offset in Java : " + date);

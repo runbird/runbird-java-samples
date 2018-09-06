@@ -11,7 +11,8 @@ package com.scy.java8.lambda.basic;
 
 
 //函数接口  单一责任制，一个接口只有一个要实现的事情
-@FunctionalInterface //可以加，明示不要加其他的方法
+@FunctionalInterface
+        //可以加，明示不要加其他的方法
 interface lambdaInterface {
 
     int doubleNum(int i);
@@ -19,8 +20,8 @@ interface lambdaInterface {
     //该接口只有一个 {要实现} 的方法，因为1.8有default
     // int secondNum();
 
-    default int second(int x,int y){
-        return x+y;
+    default int second(int x, int y) {
+        return x + y;
     }
 }
 
@@ -28,7 +29,7 @@ public class LambdaDemo {
     public static void main(String[] args) {
 
         lambdaInterface interf1 = (i) -> i * 2;
-        System.out.println(interf1.second(2,3));
+        System.out.println(interf1.second(2, 3));
         System.out.println(interf1.doubleNum(5));
 
         //只有一个参数，常见的写法
@@ -40,7 +41,7 @@ public class LambdaDemo {
         //方法体多的情况
         lambdaInterface interf4 = (int i) -> {
             System.out.println("hello lambda!!");
-            return i*2;
+            return i * 2;
         };
 
     }

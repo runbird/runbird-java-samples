@@ -42,9 +42,10 @@ public class TypeDemo {
         //没有重载情况
         // demo.test((x, y) -> x + y);
         //有重载的时候，进行强转
-        demo.test((IMathDao2)(x, y) -> x + y);
+        demo.test((IMathDao2) (x, y) -> x + y);
 
     }
+
     //多数情况
     public void test(IMathDao mathDao) {
     }

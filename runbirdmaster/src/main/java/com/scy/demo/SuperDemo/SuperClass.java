@@ -49,7 +49,7 @@ public class SuperClass {
         }
 
         void run() {
-           // super.speak(); // 访问父类的函数
+            // super.speak(); // 访问父类的函数
             System.out.println("我是儿子");
         }
     }
