@@ -16,7 +16,6 @@ import java.util.concurrent.Semaphore;
  */
 public class HashMapDemo {
     private static Map<Integer, Integer> map = new HashMap<>();
-
     public static int threadNum = 100;
     public static int clientNum = 3000;
 
