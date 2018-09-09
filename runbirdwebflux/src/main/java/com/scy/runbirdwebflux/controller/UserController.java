@@ -2,6 +2,7 @@ package com.scy.runbirdwebflux.controller;
 
 import com.scy.runbirdwebflux.domain.User;
 import com.scy.runbirdwebflux.repository.UserRepository;
+import com.scy.runbirdwebflux.util.CheckUtil;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -9,6 +10,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+
+import javax.validation.Valid;
 
 /**
  * 类名： UserController <br>
@@ -42,10 +45,11 @@ public class UserController {
     }
 
     @PostMapping(value = "/addUser")
-    public Mono<User> addUser(@RequestBody User user) {
+    public Mono<User> addUser(@Valid @RequestBody User user) {
         //spring data JPA,新增和修改都是save,如果带有id是新增
         //如果有的不允许修改id可根据实际情况
         user.setId(null);
+        CheckUtil.checkName(user.getName());
         return this.repository.save(user);
     }
 
@@ -61,7 +65,7 @@ public class UserController {
     }
 
     @PutMapping(value = "/{id}")
-    public Mono<ResponseEntity<User>> updateUser(@PathVariable(value = "id") String id, @RequestBody User user) {
+    public Mono<ResponseEntity<User>> updateUser(@PathVariable(value = "id") String id, @Valid @RequestBody User user) {
         return this.repository.findById(id)
                 .flatMap(u -> {
                     u.setAge(user.getAge());
