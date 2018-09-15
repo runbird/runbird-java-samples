@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.mongodb.repository.config.EnableReactiveMongoRepositories;
 
 @SpringBootApplication
-@EnableReactiveMongoRepositories
+@EnableReactiveMongoRepositories// 不加该注解会导致 mongoRepository注入失败
 public class RunbirdwebfluxApplication {
 
     public static void main(String[] args) {

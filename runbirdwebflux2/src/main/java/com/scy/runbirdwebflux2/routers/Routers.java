@@ -20,14 +20,14 @@ import org.springframework.web.reactive.function.server.ServerResponse;
 @Configuration
 public class Routers {
 
-
     @Bean
     RouterFunction<ServerResponse> userHandlerRouter(UserHandler handler) {
         return RouterFunctions.nest(
-                //相当于类上的 @RequestMapping("/user")
+                //相当于  类上的@RequestMapping("/user")
                 RequestPredicates.path("/user"),
-                //相当于方法上的 @RequestMapping
+                //相当于  方法上的@RequestMapping
                 RouterFunctions.route(RequestPredicates.GET("/"), handler::findAll)
+                        //accept 需要接收的Json格式
                         .andRoute(RequestPredicates.POST("/").and(RequestPredicates.accept(MediaType.APPLICATION_JSON)), handler::createUser)
                         .andRoute(RequestPredicates.DELETE("{/id}"), handler::deleteUser)
         );

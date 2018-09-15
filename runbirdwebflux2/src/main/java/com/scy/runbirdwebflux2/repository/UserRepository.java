@@ -9,12 +9,11 @@ import reactor.core.publisher.Flux;
 /**
  * 类名： UserRepository <br>
  * 描述：TODO <br>
- * 创建日期： 2018/9/5 <br>
+ * 创建日期： 2018/9/16 <br>
  *
  * @author suocaiyuan
  * @version V1.0
  */
-
 @Repository(value = "userRepository")
 public interface UserRepository extends ReactiveMongoRepository<User,String> {
 
