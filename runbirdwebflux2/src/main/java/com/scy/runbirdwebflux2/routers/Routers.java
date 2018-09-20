@@ -29,7 +29,7 @@ public class Routers {
                 RouterFunctions.route(RequestPredicates.GET("/"), handler::findAll)
                         //accept 需要接收的Json格式
                         .andRoute(RequestPredicates.POST("/").and(RequestPredicates.accept(MediaType.APPLICATION_JSON)), handler::createUser)
-                        .andRoute(RequestPredicates.DELETE("{/id}"), handler::deleteUser)
+                        .andRoute(RequestPredicates.DELETE("/{id}"), handler::deleteUser)
         );
     }
 
