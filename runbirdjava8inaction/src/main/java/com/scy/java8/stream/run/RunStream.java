@@ -23,7 +23,7 @@ public class RunStream {
         Random random = new Random();
 
         //随机产生数据
-        Stream<Integer> stream = Stream.generate(() -> random.nextInt())
+        Stream<Integer> stream = Stream.generate(random::nextInt)
                 //产生500个（无限流不需要短路操作）
                 .limit(500)
                 //第1个无状态操作
@@ -35,6 +35,8 @@ public class RunStream {
                 });
 
         //终止操作
-        stream.count(); //ctrl+alt+v 抽取出变量stream
+        //ctrl+alt+v 抽取出变量stream
+        long count = stream.count();
+        System.out.println("the result of count :" + count);
     }
 }
