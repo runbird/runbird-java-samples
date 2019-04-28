@@ -1,7 +1,7 @@
 package com.scy.java8.lambda.basic;
 
 /**
- * 类名： ThreadDemo <br>
+ * 类名： thread <br>
  * 描述：TODO <br>
  * 创建日期： 2018/7/9 <br>
  *
