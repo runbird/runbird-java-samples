@@ -1,5 +1,6 @@
 package com.scy.java8.lambda.interfacemethods;
 
+import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.util.function.Function;
 

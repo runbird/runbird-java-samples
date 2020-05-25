@@ -1,4 +1,4 @@
-package com.scy.basicpoint;
+package com.scy.juc;
 
 import java.beans.IntrospectionException;
 import java.beans.PropertyDescriptor;
