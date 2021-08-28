@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.scy.demo</groupId>
-    <artifactId>spring5-and-java8-samples</artifactId>
+    <artifactId>runbird-java-samples</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
@@ -16,28 +16,10 @@
         <spring-boot>2.2.2.RELEASE</spring-boot>
     </properties>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>12</source>
-                    <target>12</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
     <modules>
-        <module>runbird-concurrent</module>
         <module>runbird-java8inaction</module>
         <module>runbird-master</module>
-        <module>runbird-webflux</module>
-        <module>runbird-webflux2</module>
-        <module>runbird-webflux-client</module>
-        <module>runbird-reactivestream2</module>
-        <module>runbird-redis</module>
+        <module>runbird-java11inaction</module>
     </modules>
 
     <dependencyManagement>
@@ -52,4 +34,17 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>11</source>
+                    <target>11</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
