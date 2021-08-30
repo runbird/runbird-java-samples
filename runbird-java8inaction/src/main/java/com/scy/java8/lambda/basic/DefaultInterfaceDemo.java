@@ -10,6 +10,9 @@ package com.scy.java8.lambda.basic;
  */
 
 
+/**
+ * lambda表达式需要只有一个接口未实现方法
+ */
 @FunctionalInterface
 interface DefaultInterfaceDemo {
     int doubleNum(int i);

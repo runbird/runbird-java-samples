@@ -28,5 +28,7 @@ public class MinNumDemo {
         int minNum = IntStream.of(numbers).min().getAsInt();
         System.out.println(minNum);
 
+        int maxNum = IntStream.of(numbers).max().getAsInt();
+        System.out.println(maxNum);
     }
 }

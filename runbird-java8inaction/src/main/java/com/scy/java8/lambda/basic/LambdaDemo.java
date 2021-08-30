@@ -1,5 +1,7 @@
 package com.scy.java8.lambda.basic;
 
+import java.util.function.Function;
+
 /**
  * 类名： LambdaDemo <br>
  * 描述：TODO <br>
@@ -43,6 +45,9 @@ public class LambdaDemo {
             System.out.println("hello lambda!!");
             return i * 2;
         };
+
+        Function<String, Integer> function = Integer::parseInt;
+        System.out.println(function.apply("10"));
 
     }
 }
